@@ -1,6 +1,5 @@
 test.class
 test.java
-*.class
 .vscode/
 
 ## Ignore Visual Studio temporary files, build results, and
