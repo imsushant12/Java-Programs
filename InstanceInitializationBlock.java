@@ -1,6 +1,6 @@
 public class InstanceInitializationBlock 
 {
-    private int x;
+    public int x;
     {
         System.out.println("Initialization block! x = " + x);
         x = 5;
@@ -11,7 +11,11 @@ public class InstanceInitializationBlock
     }
     public static void main(String[] args)
     {
-        InstanceInitializationBlock i1 = new InstanceInitializationBlock();        
-        InstanceInitializationBlock i2 = new InstanceInitializationBlock();        
+        InstanceInitializationBlock i1 = new InstanceInitializationBlock();
+        System.out.println("Instance block 1 : " + i1.x);   
+        i1.x = i1.x+1;     
+        InstanceInitializationBlock i2 = new InstanceInitializationBlock();       
+        System.out.println("Instance block 1 : " + i1.x); 
+        System.out.println("Instance block 2 : " + i2.x);  
     }
 }
