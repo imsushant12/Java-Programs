@@ -1,4 +1,4 @@
-package temporarypackage;
+//package temporarypackage;
 
 public class MakePackage 
 {
