@@ -1,6 +1,6 @@
-package firstPackage;
+//package firstPackage;
 
-import secondPackage.Student;
+//import secondPackage.Student;
 
 public class Example 
 {
