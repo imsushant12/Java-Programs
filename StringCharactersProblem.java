@@ -19,5 +19,7 @@ public class StringCharactersProblem {
         System.out.println("Number of Characters in string one is = " + s1.length());
         System.out.println("Number of Characters in string two is = " + s2.length());
         System.out.println("Number of Characters in string three is = " + s3.length());
+
+        sc.close();
     }
 }
