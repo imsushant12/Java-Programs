@@ -26,5 +26,6 @@ public class StringProblem {
         else
             System.out.println("Entered string is not a palindrome.");
 
+        sc.close();
     }
 }
