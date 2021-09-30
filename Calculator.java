@@ -37,5 +37,7 @@ public class Calculator {
         } catch (NumberFormatException e) {
             System.out.println("Something went wrong.");
         }
+
+        sc.close();
     }
 }
