@@ -25,5 +25,6 @@ public class SequenceumofPreviousTwo {
             first = second;
             second = sum;
         }
+        sc.close();
     }
 }
