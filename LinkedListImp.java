@@ -74,6 +74,7 @@ public class LinkedListImp {
     public void printList() {
         if (head == null) {
             System.out.println("The list is empty.");
+            return;
         }
 
         Node currentNode = head;
@@ -137,7 +138,7 @@ public class LinkedListImp {
         Node currentNode = head;
         int currentPosition = 1;
 
-        while (currentPosition < position-1) {
+        while (currentPosition < position - 1) {
             currentNode = currentNode.next;
             currentPosition++;
         }
@@ -150,6 +151,48 @@ public class LinkedListImp {
 
     public int getSize() {
         return size;
+    }
+
+    public void reverseListIterative() {
+        if (head == null) {
+            System.out.println("The list is empty.");
+            return;
+        }
+
+        if (head.next == null)
+            return;
+
+        Node previousNode = head;
+        Node currentNode = head.next;
+
+        while (currentNode != null) {
+            Node nextNode = currentNode.next;
+            currentNode.next = previousNode;
+
+            // Updating nodes:
+            previousNode = currentNode;
+            currentNode = nextNode;
+        }
+
+        head.next = null;
+        head = previousNode;
+    }
+
+    public Node reverseListRecursive(Node head) {
+        if (head == null) {
+            System.out.println("The list is empty.");
+            return null;
+        }
+
+        if (head.next == null)
+            return head;
+
+        Node newNode = reverseListRecursive(head.next);
+
+        head.next.next = head;
+        head.next = null;
+
+        return newNode;
     }
 
     public static void main(String[] args) {
@@ -174,5 +217,9 @@ public class LinkedListImp {
         ll.deleteAfter(3);
         ll.printList();
         System.out.println(ll.getSize());
+
+        ll.reverseListIterative();
+        ll.head = ll.reverseListRecursive(ll.head);
+        ll.printList();
     }
 }
