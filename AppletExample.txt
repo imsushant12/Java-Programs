@@ -1,1 +1,0 @@
-<applet code="AppletExample" width="300" height="250"> </applet>
