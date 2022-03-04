@@ -3,7 +3,7 @@ class Person{
     int age;
 
     public Person(){
-        System.out.println("Un-parametrised Constructor.");
+        System.out.println("Un-parametrized Constructor.");
     }
 
     public Person(String name){
@@ -16,7 +16,7 @@ class Person{
         this("Gaurav");
         this.name = name;
         this.age = age;
-        System.out.println("2 - Parametrized constuctor.");
+        System.out.println("2 - Parametrized constructor.");
     }
 }
 
